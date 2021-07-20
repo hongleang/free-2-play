@@ -1,10 +1,10 @@
 const Card = (props) => {
   return (
-    <div>
-      <h1>{props.key}</h1>
-      <img src={props.thumbnail} alt="" />
-      <h2>{props.title}</h2>
-      <p>{props.short_description}</p>
+    <div className="card">
+      <h1 className="card__rank">{props.rank + 1}</h1>
+      <img src={props.thumbnail} alt="" className="card__thumbnail"/>
+      <h2 className="card__title">{props.title}</h2>
+      <p className="card__description">{props.short_description}</p>
     </div>
   )
 }

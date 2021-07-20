@@ -2,11 +2,13 @@ import Card from '../Card/Card';
 
 const CardWrapper = (props) => {
   return(
-    <div>
+    <div className="card-wrapper">
       {
         props.gamesData.map( game => {
           return(
-            <Card key={game.id.toString()} 
+            <Card
+                key={game.id.toString()}
+                rank={props.gamesData.indexOf(game)} 
                 title={game.title} 
                 thumbnail={game.thumbnail} 
                 description={game.short_description}
