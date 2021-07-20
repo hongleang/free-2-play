@@ -2,7 +2,7 @@ import Card from '../Card/Card';
 
 const CardWrapper = (props) => {
   return(
-    <div className="card-wrapper">
+    <div className="card-wrapper" style={{display:"grid", gridTemplateColumns: "repeat(3, 1fr)"}}>
       {
         props.gamesData.map( game => {
           return(

@@ -1,6 +1,6 @@
 import Dropdown from '../Dropdown/Dropdown';
 
-const categorySelection = ["Shooter", "MMO", "MMORPG", "Strategy", "Moba"];
+const categorySelection = ["Shooter", "MMO", "MMORPG", "Strategy"];
 const platformSelection = ["PC", "Browser"];
 
 const DropdownWrapper = (props) => {
