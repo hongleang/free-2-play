@@ -2,7 +2,7 @@
   "name": "free-to-play-games-list",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/hongleang/free-2-play",
+  "homepage": ".",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
