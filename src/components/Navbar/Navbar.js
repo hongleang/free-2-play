@@ -4,16 +4,15 @@ import styles from './Navbar.module.scss'
 const Navbar = () => {
   return ( 
     <div className={styles.navbar}>
-      <img className={styles.navbar__img} src="src/assets/images/logo.png" alt="" />
-      <img className={styles.navabar__hamburger} src="src/assets/images/icon-hamburger.svg" alt="" />
-      
-      <ul className={styles.dropdown}>
-        <li className={styles.dropdown__item}><a href="#">Home</a></li>
-        <li className={styles.dropdown__item}><a href="#">Top games list</a></li>
-        <li className={styles.dropdown__item}><a href="#">Sign in</a></li>
-        <li className={styles.dropdown__item}><a href="#">Sign up</a></li>
-      </ul>
-    </div> 
+      <a href="#">Logo</a>
+      <div className={styles.dropdown}>
+        <ul className={styles.dropdown__items}>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Games List</a></li>
+          <li><a href="#">Sign in / Sign up</a></li>
+        </ul>
+      </div>
+    </div>
   );
 }
  
