@@ -24,7 +24,6 @@ import Features from '../../components/Features/Features';
 const Homepage = (props) => {
   return ( 
     <div className={styles.homepage}>
-      <Navbar></Navbar>
       <Features></Features>
     </div> 
     );
