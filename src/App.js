@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Navbar from './components/Navbar/Navbar';
-
+import Homepage from './pages/Homepage/Hompage'
 
 const App = () => {
 
@@ -10,7 +10,9 @@ const App = () => {
     <Router>
       <Navbar></Navbar>
       <Switch>
-        <Route exact path="/"></Route>
+        <Route exact path="/">
+          <Homepage></Homepage>
+        </Route>
       </Switch>
     </Router>
   );
