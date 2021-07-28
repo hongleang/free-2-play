@@ -4,29 +4,8 @@
   margin-top: 7rem;
 
   &__header {
+    font-family: $smallHeader;
     font-weight: 900;
-  }
-}
-
-.homepage__slider {
-  width: 100%;
-  height: 300px;
-
-  &__wrapper {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  &__item {
-    width: 600px;
-    height: 300px;
-    border: 1px solid gray;
-    
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+    font-size: 2.25rem;
   }
 }
