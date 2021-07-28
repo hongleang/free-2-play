@@ -1,0 +1,45 @@
+.card__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  width: 100%;
+  margin-top: 5rem;
+}
+
+.card__item {
+  position: relative;
+  max-width: 100%;
+  height: auto;
+  transition: all .4s ease-in-out;
+  &__img {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 2rem .5rem;
+    background-color: #fff;
+    &__left {
+      line-height: 2rem;
+      h6 {
+        font-size: 1rem;
+        font-weight: 900;
+      }
+    }
+  }
+  &:hover {
+    opacity: .8;
+    transform: scale(1.1);
+  }
+}
+
+.badge--purple {
+  background-color: purple;
+  padding: .8rem 1.5rem;
+}

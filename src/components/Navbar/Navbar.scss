@@ -11,7 +11,8 @@
   padding: 0 2rem;
   background-color: $black;
   color: #fff;
-
+  z-index: 99999;
+  
   &__logo {
     color: aqua;
     font-size: 1.5rem;
