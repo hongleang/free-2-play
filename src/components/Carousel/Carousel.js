@@ -31,7 +31,7 @@ const Carousel = (props) => {
           spaceBetween: 40,
         },
         1024: {
-          slidesPerView: 3,
+          slidesPerView: 2,
           spaceBetween: 50,
         },
       }}

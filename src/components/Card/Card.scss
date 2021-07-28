@@ -1,16 +1,20 @@
 .card__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  width: 100%;
-  margin-top: 5rem;
+  grid-template-columns: repeat(3, 250px);  
+  gap: 1.5rem;
+  margin: 5rem auto;
+  max-width: 1024px;
+  justify-content: center;
+  align-items: center;
 }
 
 .card__item {
   position: relative;
-  max-width: 100%;
+  width: 100%;
+  max-height: 300px;
   height: auto;
-  transition: all .4s ease-in-out;
+  transition: all .6s ease-in-out;
+  overflow: hidden;
   &__img {
     display: block;
     width: 100%;
@@ -23,10 +27,13 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 2rem .5rem;
+    padding: 1rem;
     background-color: #fff;
     &__left {
-      line-height: 2rem;
+      line-height: 1rem;
+      small {
+        font-size: .7rem;
+      }
       h6 {
         font-size: 1rem;
         font-weight: 900;
@@ -35,11 +42,12 @@
   }
   &:hover {
     opacity: .8;
-    transform: scale(1.1);
+    transform: scale(1.01);
   }
 }
 
 .badge--purple {
+  font-size: .5rem;
   background-color: purple;
-  padding: .8rem 1.5rem;
+  padding: .8rem .8rem;
 }
