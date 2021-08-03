@@ -5,7 +5,7 @@ It is built as a practical projects for learning React js, routing, firebase ,an
 
 ## Current work:
 
-The app can be accessed through: https://hongleang.github.io/free-2-play/ 
+The app can be accessed through: https://hongleang.github.io/react-free-2-play-clone/
 
 + Display from games Data from https://rapidapi.com/digiwalls/api/free-to-play-games-database
 
