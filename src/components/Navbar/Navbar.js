@@ -1,22 +1,24 @@
+import { Link } from 'react-router-dom';
+
 import "./Navbar.scss";
 import "./Toggle.scss"
 
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <a className="navbar__logo" href="/">
+      <Link to="/" className="navbar__logo">
         F2P <i class="fas fa-dice"></i> GAMES
-      </a>
+      </Link>
       <ul className="navbar__menu">
         <li className="navbar__item">
-          <a href="/" className="navbar__link">
+          <Link to="/" className="navbar__link">
             New Release Games
-          </a>
+          </Link>
         </li>
         <li className="navbar__item">
-          <a href="/topgames" className="navbar__link">
+          <Link to="/topgames" className="navbar__link">
             Top Games
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>
