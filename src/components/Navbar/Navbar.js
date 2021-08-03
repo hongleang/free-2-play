@@ -10,17 +10,12 @@ const Navbar = () => {
       <ul className="navbar__menu">
         <li className="navbar__item">
           <a href="/" className="navbar__link">
-            Home
+            New Release Games
           </a>
         </li>
         <li className="navbar__item">
           <a href="/topgames" className="navbar__link">
             Top Games
-          </a>
-        </li>
-        <li className="navbar__item">
-          <a href="/sign-up" className="navbar__link">
-            Sign up
           </a>
         </li>
       </ul>

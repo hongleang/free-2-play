@@ -1,0 +1,27 @@
+.gamefilter-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.gamefilter-wrapper > * {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  & > :nth-child(1) {
+    margin-right: 1rem;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .gamefilter-wrapper {
+    flex-direction: row;
+  }
+  
+  .gamefilter-wrapper > * {
+    & > :nth-child(1) {
+      margin-bottom: 0;
+    }
+  }
+}

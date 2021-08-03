@@ -18,7 +18,7 @@ const TopGames = (props) => {
 
   useEffect(() => {
     const fetchingGames = (genres, platforms) => {
-      fetch(`https://free-to-play-games-database.p.rapidapi.com/api/games?platform=${platforms.toLowerCase()}&category=${genres.toLowerCase()}&sort-by=release-date`,
+      fetch(`https://free-to-play-games-database.p.rapidapi.com/api/games?platform=${platforms.toLowerCase()}&category=${genres.toLowerCase()}&sort-by=popularity`,
         {
           "method": "GET",
           "headers": {
@@ -32,7 +32,19 @@ const TopGames = (props) => {
       .catch(err => console.log(err));
     }
     fetchingGames(genre, platform);
-  })
+  });
+
+  const onChangePlatformHandler = (event) => {
+    const platform = event.target.value.toLowerCase();
+    setPlatform(platform);
+  };
+
+  const onChangeGenreHandler = (event) => {
+    const genre = event.target.value.toLowerCase();
+    setGenre(genre);
+  };
+
+
   return (
     <div className="topgames">
       <div className="topgames__container container">
@@ -40,12 +52,12 @@ const TopGames = (props) => {
           <i className="fab fa-hotjar text-danger"></i> Popular free games title
         </h2>
         <hr />
-        <h3 className="display-1">Top 10 {genre} for {platform} in {fullDate}</h3>
+        <h3 className="display-1">Top 10 {genre.capital} for {platform} in {fullDate}</h3>
         <p>Below, you can find our ongoing Top 10 Free {genre} Games in August 2021. Credited: https://www.freetogame.com/</p>
-        <GameFilter></GameFilter>
+        <GameFilter onChangePlatform={onChangePlatformHandler} onChangeGenre={onChangeGenreHandler}></GameFilter>
       </div>
       <div className="container">
-        <TopGameCard gamesData = {data}></TopGameCard>
+        <TopGameCard gamesData={data && data.slice(0,10)}></TopGameCard>
       </div>
     </div>
   );

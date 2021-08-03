@@ -1,40 +1,52 @@
 import React from 'react';
 
+import './GameFilter.scss';
+
 const GameFilter = (props) => {
+  const { onChangePlatform , onChangeGenre } = props;
+  
   const genreSelection = ["MMO", "MMORPG", "Shooter", "Strategy"];
   const platformSelection = ["PC", "Browser"];
+  
   
   return(
     <div className="gamefilter-wrapper">
       <div className="platform-filter">
         <p>See more top ten games in:</p>
         <div class="dropdown">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-            
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-           {
+          <select
+           name="menu" id="selection" 
+           className="btn btn-secondary dropdown-toggle"
+           onChange={event => onChangePlatform(event)}
+           >
+            {
             genreSelection.map((selection, selectionIndex) => {
               return (
-                <li key={selectionIndex} className="dropdown-item"><input class="dropdown-item" onClick={selection.toLowerCase()} type="button"></input></li>
+                <option key={selectionIndex}>{selection}</option>
               )
-             })
-           }
-            
-          </ul>
+              })
+            }
+          </select>          
         </div>
       </div>
       <div className="genre-filter">
-      <p>See more top ten games in:</p>
-      <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-          Dropdown button
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-          <li className="dropdown-item"></li>
-        </ul>
+        <p>See more top ten games in:</p>
+        <div class="dropdown">
+          <select
+          name="menu" id="selection" 
+          className="btn btn-secondary dropdown-toggle"
+          onChange={event => onChangeGenre(event)}
+          >
+            {
+            platformSelection.map((selection, selectionIndex) => {
+              return (
+                <option key={selectionIndex}>{selection}</option>
+              )
+              })
+            }
+          </select>          
+        </div>
       </div>
-    </div>
     </div>
   )
 }
