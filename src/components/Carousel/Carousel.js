@@ -49,7 +49,9 @@ const Carousel = (props) => {
         props.games.map((game) => {
           return (
             <SwiperSlide key={game.id}>
-              <img src={game.thumbnail} alt="" />
+              <a href={game.freetogame_profile_url} target="_blank">
+                <img src={game.thumbnail} alt="" />
+              </a>
             </SwiperSlide>
           );
         })}

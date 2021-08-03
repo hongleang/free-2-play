@@ -1,0 +1,65 @@
+@import "/src/abstracts/abstracts";
+
+
+.topgamesCardWrapper {
+  display: grid;
+  grid-template-columns: 1fr;  
+  gap: 1.5rem;
+  width: 100%;
+  margin: 5rem 0;
+}
+
+.topgamesCard {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  color: black;
+  transition: transform .6s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  &:active,
+  &:hover {
+    color: rgb(119, 119, 119);
+    transform: scale(1.05);
+  }
+  .topgamesCard__img {
+    overflow: hidden;
+  }
+}
+
+.ranking {
+  font-size: 3.5rem;
+}
+
+.description {
+  font-size: 1.2rem;
+  width: 100%;
+  margin: 2rem 0;
+  word-wrap: break-word;
+}
+
+
+.release-date, .title {
+  font-weight: 900;
+}
+
+@media screen and (min-width: 600px) {
+  .topgamesCard {
+    flex-direction: row;
+  }
+
+  .topgamesCard__img {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h2 {
+      flex: 1 1 0;
+      margin-right: 1.5rem;
+    }
+  }
+
+  .topgamesCard__content {
+    flex-basis: 60%;
+    margin-left: 2rem;
+  }
+}

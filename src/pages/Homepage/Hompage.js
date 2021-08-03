@@ -10,32 +10,37 @@ import "../Homepage/Homepage.scss";
 const Homepage = () => {
   const [gameData, setGameData] = useState(null);
 
-  useEffect(() => {
-    fetch(
-      "https://free-to-play-games-database.p.rapidapi.com/api/games",
-      {
-        method: "GET",
-        headers: {
-          "x-rapidapi-key":
-            "a60e9faf7fmshc23154d0472737cp1baaf5jsna13ea55c29e8",
-          "x-rapidapi-host": "free-to-play-games-database.p.rapidapi.com",
-        },
-      }
-    )
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => setGameData(data.slice(0,100)))
-      .catch((err) => {
-        console.error(err);
-      });
+  useEffect( () => {
+    const fetchData = query => {
+      fetch(
+        `https://free-to-play-games-database.p.rapidapi.com/api/games?sort-by=release-date`,
+        {
+          method: "GET",
+          headers: {
+            "x-rapidapi-key":
+              "a60e9faf7fmshc23154d0472737cp1baaf5jsna13ea55c29e8",
+            "x-rapidapi-host": "free-to-play-games-database.p.rapidapi.com",
+          },
+        }
+      )
+        .then((response) => {
+          return response.json();
+        })
+        .then((data) => setGameData(data.slice(0,100)))
+        .catch((err) => {
+          console.error(err);
+        });
+    }
+    
+    fetchData();
+    
   });
 
   return (
     <div className="homepage">
       <div className="homepage__container container">
         <h5 className="hompage__header fw-bold">
-          <i class="fab fa-hotjar text-danger"></i> HOT GAMES
+          <i className="fab fa-hotjar text-danger"></i> New Release Free Games
         </h5>
         <hr />
       </div>
