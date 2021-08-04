@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/hongleang/react-free-2-play-clone/static/css/main.bac15ea2.chunk.css",
-    "main.js": "/hongleang/react-free-2-play-clone/static/js/main.331dc2c8.chunk.js",
-    "main.js.map": "/hongleang/react-free-2-play-clone/static/js/main.331dc2c8.chunk.js.map",
+    "main.js": "/hongleang/react-free-2-play-clone/static/js/main.5e76c7e7.chunk.js",
+    "main.js.map": "/hongleang/react-free-2-play-clone/static/js/main.5e76c7e7.chunk.js.map",
     "runtime-main.js": "/hongleang/react-free-2-play-clone/static/js/runtime-main.b15c63aa.js",
     "runtime-main.js.map": "/hongleang/react-free-2-play-clone/static/js/runtime-main.b15c63aa.js.map",
     "static/css/2.d11bb6a5.chunk.css": "/hongleang/react-free-2-play-clone/static/css/2.d11bb6a5.chunk.css",
@@ -18,6 +18,6 @@
     "static/css/2.d11bb6a5.chunk.css",
     "static/js/2.871e1b10.chunk.js",
     "static/css/main.bac15ea2.chunk.css",
-    "static/js/main.331dc2c8.chunk.js"
+    "static/js/main.5e76c7e7.chunk.js"
   ]
 }
