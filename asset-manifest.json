@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/react-free-2-play-clone/static/css/main.bac15ea2.chunk.css",
-    "main.js": "/react-free-2-play-clone/static/js/main.e07ae99e.chunk.js",
-    "main.js.map": "/react-free-2-play-clone/static/js/main.e07ae99e.chunk.js.map",
+    "main.js": "/react-free-2-play-clone/static/js/main.2bc63c10.chunk.js",
+    "main.js.map": "/react-free-2-play-clone/static/js/main.2bc63c10.chunk.js.map",
     "runtime-main.js": "/react-free-2-play-clone/static/js/runtime-main.07f228e2.js",
     "runtime-main.js.map": "/react-free-2-play-clone/static/js/runtime-main.07f228e2.js.map",
     "static/css/2.d11bb6a5.chunk.css": "/react-free-2-play-clone/static/css/2.d11bb6a5.chunk.css",
@@ -18,6 +18,6 @@
     "static/css/2.d11bb6a5.chunk.css",
     "static/js/2.48e9d400.chunk.js",
     "static/css/main.bac15ea2.chunk.css",
-    "static/js/main.e07ae99e.chunk.js"
+    "static/js/main.2bc63c10.chunk.js"
   ]
 }
