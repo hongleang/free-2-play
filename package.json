@@ -1,7 +1,7 @@
 {
   "name": "free-to-play-games-list",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "homepage": "https://github.com/hongleang/react-free-2-play-clone",
   "dependencies": {
     "@babel/core": "^7.14.8",
