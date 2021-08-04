@@ -13,11 +13,11 @@ const GameFilter = (props) => {
     <div className="gamefilter-wrapper">
       <div className="platform-filter">
         <p>See more top ten games in:</p>
-        <div class="dropdown">
+        <div className="dropdown">
           <select
            name="menu" id="selection" 
            className="btn btn-secondary dropdown-toggle"
-           onChange={event => onChangePlatform(event)}
+           onChange={event => onChangeGenre(event)}
            >
             {
             genreSelection.map((selection, selectionIndex) => {
@@ -31,11 +31,11 @@ const GameFilter = (props) => {
       </div>
       <div className="genre-filter">
         <p>See more top ten games in:</p>
-        <div class="dropdown">
+        <div className="dropdown">
           <select
           name="menu" id="selection" 
           className="btn btn-secondary dropdown-toggle"
-          onChange={event => onChangeGenre(event)}
+          onChange={event => onChangePlatform(event)}
           >
             {
             platformSelection.map((selection, selectionIndex) => {
