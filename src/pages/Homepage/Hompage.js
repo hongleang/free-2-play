@@ -34,7 +34,7 @@ const Homepage = () => {
     
     fetchData();
     
-  });
+  }, []);
 
   return (
     <div className="homepage">
@@ -45,9 +45,9 @@ const Homepage = () => {
         <hr />
       </div>
       <div className="container-fluid">
-        <Carousel games={gameData && gameData.slice(0,5)}></Carousel>
+        {gameData && <Carousel games={gameData.slice(0,5)}></Carousel>}
         <hr />
-        <Card games={gameData && gameData.slice(6,12)}></Card>
+        {gameData && <Card games={gameData.slice(6,12)}></Card>}
       </div>
     </div>
   );
