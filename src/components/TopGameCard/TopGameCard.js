@@ -7,7 +7,7 @@ const TopGameCard = (props) => {
     <div className="topgamesCardWrapper">
     {
       // Map top 10 results
-      props.gamesData && props.gamesData.map((data, index) => {
+      props.gamesData.map((data, index) => {
         return (
           <a className="topgamesCard shadow-lg" key = {index} href={data.game_url}>
             <div className="topgamesCard__img">

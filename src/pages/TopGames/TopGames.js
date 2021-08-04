@@ -17,31 +17,32 @@ const TopGames = (props) => {
   const fullDate = `${monthsName[date.getMonth()]}, ${date.getFullYear()}`;
 
   useEffect(() => {
-    const fetchingGames = (genres, platforms) => {
-      fetch(`https://free-to-play-games-database.p.rapidapi.com/api/games?platform=${platforms.toLowerCase()}&category=${genres.toLowerCase()}&sort-by=popularity`,
-        {
-          "method": "GET",
-          "headers": {
-            "x-rapidapi-key": "a60e9faf7fmshc23154d0472737cp1baaf5jsna13ea55c29e8",
-            "x-rapidapi-host": "free-to-play-games-database.p.rapidapi.com"
-          }
-        }      
+    const fetchingGames = () => {
+      fetch(`https://free-to-play-games-database.p.rapidapi.com/api/games?platform=${platform.toLowerCase()}&category=${genre.toLowerCase()}&sort-by=popularity`, {
+            "method": "GET",
+            "headers": {
+              "x-rapidapi-key": "a60e9faf7fmshc23154d0472737cp1baaf5jsna13ea55c29e8",
+              "x-rapidapi-host": "free-to-play-games-database.p.rapidapi.com"
+            }
+          }      
       )
       .then(response => response.json())
       .then(data => setData(data))
       .catch(err => console.log(err));
     }
-    fetchingGames(genre, platform);
-  });
+    fetchingGames();
+  },[platform, genre]);
 
   const onChangePlatformHandler = (event) => {
-    const platform = event.target.value.toLowerCase();
-    setPlatform(platform);
+    event.preventDefault();
+    const platforms = event.target.value.toLowerCase();
+    setPlatform(platforms);
   };
 
   const onChangeGenreHandler = (event) => {
-    const genre = event.target.value.toLowerCase();
-    setGenre(genre);
+    event.preventDefault();
+    const genres = event.target.value.toLowerCase();
+    setGenre(genres);
   };
 
 
@@ -52,12 +53,12 @@ const TopGames = (props) => {
           <i className="fab fa-hotjar text-danger"></i> Popular free games title
         </h2>
         <hr />
-        <h3 className="display-1">Top 10 {genre.capital} for {platform} in {fullDate}</h3>
+        <h3 className="display-1">Top 10 {genre} for {platform} in {fullDate}</h3>
         <p>Below, you can find our ongoing Top 10 Free {genre} Games in August 2021. Credited: https://www.freetogame.com/</p>
         <GameFilter onChangePlatform={onChangePlatformHandler} onChangeGenre={onChangeGenreHandler}></GameFilter>
       </div>
       <div className="container">
-        <TopGameCard gamesData={data && data.slice(0,10)}></TopGameCard>
+        { data && <TopGameCard gamesData={data.slice(0,10)}></TopGameCard> }
       </div>
     </div>
   );
