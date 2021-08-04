@@ -8,7 +8,7 @@ import Topgames from './pages/TopGames/TopGames'
 const App = () => {
 
   return (
-    <Router>
+    <Router basename="/hongleang/react-free-2-play-clone">
       <div>
         <Navbar></Navbar>
         <Switch>
