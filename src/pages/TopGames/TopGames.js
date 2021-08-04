@@ -34,15 +34,15 @@ const TopGames = (props) => {
   },[platform, genre]);
 
   const onChangePlatformHandler = (event) => {
+    event.preventDefault();
     const platforms = event.target.value.toLowerCase();
     setPlatform(platforms);
-    console.log(platforms);
   };
 
   const onChangeGenreHandler = (event) => {
+    event.preventDefault();
     const genres = event.target.value.toLowerCase();
     setGenre(genres);
-    console.log(genres);
   };
 
 
