@@ -9,7 +9,7 @@ const TopGameCard = (props) => {
       // Map top 10 results
       props.gamesData.map((data, index) => {
         return (
-          <a className="topgamesCard shadow-lg" key = {index} href={data.game_url}>
+          <a className="topgamesCard shadow-lg" key = {index} href={data.game_url} >
             <div className="topgamesCard__img">
               <h2 className="ranking">{index + 1}.</h2>
               <img src={data.thumbnail} alt="game-thumbnail" />

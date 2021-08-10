@@ -6,7 +6,7 @@ const Card = (props) => {
     <div className="card__grid">
       {props.games && props.games.map((game) => {
         return (
-          <div className="card__item shadow-lg" key={game.id}>
+          <a href={game.game_url} target="_blank" rel="noreferrer" className="card__item shadow-lg" key={game.id}>
             <img
               src={game.thumbnail}
               alt=""
@@ -21,7 +21,7 @@ const Card = (props) => {
                 <div className="badge badge--purple">{game.genre}</div>
               </div>
             </div>
-          </div>
+          </a>
         );
       })}
     </div>
